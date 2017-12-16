@@ -16,6 +16,7 @@ import javax.persistence.Query;
  */
 public class PessoaRepository {
 
+    Pessoa pessoa = new Pessoa();
     private EntityManager manager;
 
     public PessoaRepository(EntityManager manager) {
@@ -24,6 +25,7 @@ public class PessoaRepository {
 
     public void adicionaPessoa(Pessoa pessoa) {
         this.manager.persist(pessoa);
+
     }
 
     public List<Pessoa> buscaTodas() {
